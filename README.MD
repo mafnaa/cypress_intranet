@@ -50,7 +50,7 @@ npm install cypress typescript
 ```json
 "scripts": {
     "cypress": "cypress run",
-    "cypress-open": "cypress open»
+    "cypress-open": "cypress open"
 }
 
 ```
