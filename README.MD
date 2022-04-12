@@ -45,7 +45,7 @@ npm install cypress typescript
 
 ### Create in project root typescript configuration file: "tsconfig.json"
 
-### Add custom Cypress commands to tsconfig.json
+### Add custom Cypress commands to package.json
 
 ```json
 "scripts": {
