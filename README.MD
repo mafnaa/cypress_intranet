@@ -24,7 +24,7 @@ npm run cypress
 ####!!! Make sure that NodeJs is available in env variables path or by using command:
 
 ```bash
-node ---version
+node --version
 ```
 
 ###Create folder for project
