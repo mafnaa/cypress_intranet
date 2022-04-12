@@ -1,0 +1,12 @@
+{
+  "name": "cypress_typescript_example",
+  "version": "1.0.0",
+  "description": "Minimal Cypress Typescript setup with examples of common used commands and explanation",
+  "main": "index.js",
+  "scripts": {
+    "cypress": "cypress run",
+    "cypress-open": "cypress open"
+  },
+  "author": "",
+  "license": "ISC"
+}
