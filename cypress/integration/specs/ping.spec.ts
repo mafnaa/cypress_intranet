@@ -9,7 +9,7 @@ beforeEach(function(){
 describe('Ping test', () => {
 
     // **Only 1 test case (in a nameless test suite)**
-    it('Ping web page', () => {
+    it.skip('Ping web page', () => {
         // how to use env variables
         cy.visit(Cypress.env('baseUrl'));
         cy.get('#username').type(Cypress.env('usar'));

@@ -21,7 +21,7 @@
   "viewportWidth": 1920,
   "viewportHeight": 1080,
   "env": {
-    "baseUrl": "url",
+    "baseUrl": "https://intranet.ctco.lv/",
     "pazz": "pazz",
     "usar": "usar"
   }
