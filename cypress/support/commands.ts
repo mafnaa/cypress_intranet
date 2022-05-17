@@ -15,3 +15,18 @@ Cypress.Commands.add('searchPostsByName', (searchString: string, exactName: stri
     })
     cy.get('article .article-title').should('have.text', exactName);
 });
+
+Cypress.Commands.add('postCommentToApi', (postId: number) => {
+    cy.request({
+        method: 'POST',
+        url: 'https://jsonplaceholder.cypress.io/comments',
+        qs: {
+            postId: postId
+        },
+        body: {body: 'Sample example'}
+    })
+        .then((response) => {
+            expect(response.status).to.equal(201)
+            expect(response.body).to.have.property('id', 501)
+        })
+})

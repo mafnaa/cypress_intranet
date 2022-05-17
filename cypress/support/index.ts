@@ -24,6 +24,7 @@ declare global {
         interface Chainable {
             authenticate(): Chainable<Element>
             searchPostsByName(searchString: string, exactName: string): Chainable<Element>
+            postCommentToApi(postId: number): Chainable<Element>
         }
     }
 }
