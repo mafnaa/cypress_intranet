@@ -1,8 +1,4 @@
-describe.only('Billboard test', () => {
-    before('authenticate', () => {
-        cy.authenticate()
-    });
-
+describe('Billboard test', () => {
     it('Billboard ad counter displays correct amount of ads', () => {
         cy.visit(Cypress.env('baseUrl') + 'billboard');
 
@@ -15,9 +11,7 @@ describe.only('Billboard test', () => {
                         const adCount = parseInt(regEx.toString())
                         cy.get('@products').eq(index).click();
                         cy.get('.products li')
-                            .should('have.length.within', adCount % 15, 15)
-                            .should('have.length', adCount % 15)
-                            .and('have.length.at.most', 15);
+                            .should('have.length.within', adCount % 15, 15);
                     })
                 cy.go('back');
             })

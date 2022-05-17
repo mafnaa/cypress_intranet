@@ -1,6 +1,7 @@
 describe('Login-logout test', () => {
 
     it('Logs in and logs out from intranet', () => {
+        cy.clearCookies();
         // Authenticate
         cy.visit(Cypress.env('baseUrl'));
         cy.get('#username').type(Cypress.env('usar'));
@@ -16,6 +17,7 @@ describe('Login-logout test', () => {
     })
 
     it('fails to log in with wrong password', () => {
+        cy.clearCookies();
         // Attempt to authenticate
         cy.visit(Cypress.env('baseUrl'));
         cy.get('#username').type(Cypress.env('usar'));

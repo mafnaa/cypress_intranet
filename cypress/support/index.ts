@@ -22,11 +22,12 @@ import './commands'
 declare global {
     namespace Cypress {
         interface Chainable {
-            /**
-             * Custom command to select DOM element by data-cy attribute.
-             * @example cy.dataCy('greeting')
-             */
             authenticate(): Chainable<Element>
+            searchPostsByName(searchString: string, exactName: string): Chainable<Element>
         }
     }
 }
+
+beforeEach('authenticate', () => {
+    cy.authenticate()
+});
